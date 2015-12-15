@@ -18,7 +18,7 @@ Browser='chromium-browser chromium-browser-l10n '
 #$Fonts
 Fonts='fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy '
 #$Depends
-Depends='libcanberra-gtk-module:i386 '
+Depends=' '
 #$Developer
 Developer='build-essential linux-generic linux-headers-generic linux-image-generic subversion gcc g++ make cmake git-gui subversion bison '
 #$Python
