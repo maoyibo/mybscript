@@ -3,17 +3,18 @@
 #This is a adobe flash player uploader
 #Author:Maoyibo
 #Email:maoyibo@gmail.com
-#Lisence:AGPL
+#Lisence:GPL
 #Version:0.2
 ###########################################
 echo "Close the firefox before running this script!"
-mkdir .flashdown
-cd ./.flashdown
+mkdir .flashupdater
+cd ./.flashupdater
 a=$(uname -m)
 bit_32="32"
 bit_64="64"
 if [ "$a" == "32" ];then
-    echo "The system is 32bit.Get The Download url."
+    echo "The system is 32bit."
+    echo "Get The Download url."
     aria2c "https://get.adobe.com/cn/flashplayer/download/?installer=Flash_Player_11.2_for_other_Linux_(.tar.gz)_32-bit&standalone=1" -o fpdowninfo.html
 elif [ "$a" == "x86_64" ];then
     echo "The system is 64bit.Get The Download url."
@@ -38,7 +39,7 @@ mkdir ~/.mozilla/plugins/
 cp ./libflashplayer.so ~/.mozilla/plugins/
 echo "Cleaning!"
 cd ..
-rm -vfr ./.flashdown
+rm -vfr ./.flashupdater
 echo "The flash player installation is succeed!"
 
 
